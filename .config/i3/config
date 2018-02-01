@@ -80,6 +80,7 @@ set $Mon2 HDMI-A-0
 exec_always --no-startup-id start-compton
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id ~/.config/polybar/launch_polybarv2.sh
 exec_always --no-startup-id xrdb -load ~/.Xresources
 exec_always --no-startup-id pkill trayer; trayer --edge bottom --align left --heighttype pixel --height 18 --widthtype request --SetDockType false --expand true --transparent true --alpha 255
 
@@ -88,14 +89,22 @@ exec --no-startup-id xfsettingsd
 exec --no-startup-id ksuperkey -e 'Super_L=Alt_L|F1'
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id lxpolkit
-exec --no-startup-id unclutter
-exec --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec --no-startup-id i3-msg 'workspace 10:; exec spotify; exec discord'
-exec --no-startup-id signal-desktop
+exec --no-startup-id xbanish
+#exec --no-startup-id i3-msg 'workspace 10:; exec spotify; workspace10:; exec discord;'
+exec --no-startup-id spotify
+exec --no-startup-id discord
 exec --no-startup-id rambox
+exec --no-startup-id signal-desktop
 exec --no-startup-id setxkbmap eu
+exec --no-startup-id redshift
 
-for_window [class="signal"] move to workspace $WS8
+assign [class="^Rambox"] $WS8
+assign [class="^Signal"] $WS8
+#assign [class="^Spotify"] $WS10
+assign [class="^discord"] $WS10
+
+for_window [class="Spotify"] move to workspace $WS10
+#for_window [class="discord"] move to workspace $WS10
 ###################################################################################################
 #################                          Bindings                               ##################
 ####################################################################################################
@@ -184,6 +193,7 @@ bindsym $Mod+Shift+r restart
 
 # reload the configuration file
 bindsym $Mod+Shift+c reload
+
 
 ####################################################################################################
 ################                       Container/Window control                   ##################
@@ -295,5 +305,5 @@ for_window [class="(?i)trayer"] border pixel 0
 
 
 # start on main workspaces when reloading i3 (keep me at the bottom)
-exec_always --no-startup-id i3-msg 'workspace $WS5, workspace $WS1'
+#exec_always --no-startup-id i3-msg 'workspace $WS5, workspace $WS1'
 
