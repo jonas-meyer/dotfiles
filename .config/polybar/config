@@ -46,13 +46,13 @@ padding-right = 3
 module-margin-left = 3
 module-margin-right = 3
 
-font-0 = FontAwesome:size=10;1
-font-1 = fixed:pixelsize=10;1
-font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-3 = siji:pixelsize=10;1
+font-0 = FontAwesome:size=10;2
+font-1 = fixed:pixelsize=10;2
+font-2 = unifont:fontformat=truetype:size=10:antialias=false;2
+font-3 = siji:pixelsize=10;2
 
 modules-left = i3
-modules-center = 
+modules-center = spotify
 modules-right = date volume
 
 ;tray-position = right
@@ -106,7 +106,7 @@ font-4 = Weather Icons:size=12;2
 
 
 modules-left = i3
-modules-center = 
+modules-center = spotify
 modules-right = date openweathermap-simple 
 
 ;tray-position = right
@@ -436,6 +436,12 @@ type = custom/script
 exec = ~/.config/polybar/openweathermap-simple.sh
 interval = 600
 label-font = 3
+
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/spotify.sh
+interval = 2
+tail = true
 
 [settings]
 screenchange-reload = true
