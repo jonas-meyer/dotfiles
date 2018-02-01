@@ -21,7 +21,7 @@ set nocompatible
 filetype indent plugin on
  
 " Enable syntax highlighting
-" syntax on
+syntax on
  
  
 "------------------------------------------------------------
@@ -178,12 +178,9 @@ Plug 'honza/vim-snippets'
 Plug 'Shougo/neocomplete.vim'
 Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
-Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
-Plug 'chrisbra/Colorizer'
-Plug '907th/vim-auto-save'
 call plug#end()
 
 "-----------------------------------------------------------
@@ -279,8 +276,8 @@ endif
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "------------------------------------------------------------------------
 "Spelling
-set spelllang=en_gb,de_de
-set spell
+"set spelllang=en_gb,de_de
+"set spell
 "------------------------------------------------------------------------
 "Encoding
 
