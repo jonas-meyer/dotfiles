@@ -3,7 +3,7 @@
 ! ------------------------------------------------------------------------------
 ! special
 *.foreground:   #c0c5ce
-*.background:   #2b303b
+*.background:   #414A59
 *.cursorColor:  #c0c5ce
 
 ! black
@@ -64,7 +64,7 @@ URxvt*iso14755:         false
 
 ! appearance
 URxvt*depth:            32
-URxvt*background:       [90]#2b303b
+URxvt*background:       [90]#2B303B
 URxvt*scrollBar:        false
 URxvt*scrollBar_right:  false
 URxvt*internalBorder:   0
