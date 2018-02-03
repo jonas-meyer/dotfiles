@@ -91,6 +91,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id lxpolkit
 exec --no-startup-id xbanish
 #exec --no-startup-id i3-msg 'workspace 10:; exec spotify; workspace10:; exec discord;'
+exec --no-startup-id i3-msg 'workspace 8:; append_layout ~/.config/i3/workspace8.json'
 exec --no-startup-id spotify
 exec --no-startup-id discord
 exec --no-startup-id rambox
@@ -98,8 +99,8 @@ exec --no-startup-id signal-desktop
 exec --no-startup-id setxkbmap eu
 exec --no-startup-id redshift
 
-assign [class="^Rambox"] $WS8
-assign [class="^Signal"] $WS8
+#assign [class="^Rambox"] $WS8
+#assign [class="^Signal"] $WS8
 #assign [class="^Spotify"] $WS10
 assign [class="^discord"] $WS10
 
