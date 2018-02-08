@@ -97,7 +97,7 @@ exec --no-startup-id discord
 exec --no-startup-id rambox
 exec --no-startup-id signal-desktop
 exec --no-startup-id setxkbmap eu
-exec --no-startup-id redshift
+exec --no-startup-id redshift -l 52.5200:13.4050
 
 #assign [class="^Rambox"] $WS8
 #assign [class="^Signal"] $WS8
