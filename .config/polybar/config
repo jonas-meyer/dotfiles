@@ -52,8 +52,8 @@ font-2 = unifont:fontformat=truetype:size=10:antialias=false;2
 font-3 = siji:pixelsize=10;2
 
 modules-left = i3
-modules-center = spotify
-modules-right = date volume
+modules-center = date
+modules-right = volume
 
 ;tray-position = right
 ;tray-padding = 2
@@ -106,8 +106,8 @@ font-4 = Weather Icons:size=12;2
 
 
 modules-left = i3
-modules-center = spotify
-modules-right = date openweathermap-simple 
+modules-center = date
+modules-right = openweathermap-simple 
 
 ;tray-position = right
 ;tray-padding = 2
